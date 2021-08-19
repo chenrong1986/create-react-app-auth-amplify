@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "aws-amplify": "^4.2.0",
     "@aws-amplify/ui-react": "^1.2.6",
+    "alert": "^5.0.10",
+    "aws-amplify": "^4.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "alert": "^5.0.10",
-    "request": "^2.88.2",
-    "react-scripts": "^4.0.3"
+    "react-scripts": "^4.0.3",
+    "request": "^2.88.2"
   },
   "resolutions": {
     "set-value": "^2.0.1",

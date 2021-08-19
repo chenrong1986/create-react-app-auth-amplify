@@ -24,6 +24,15 @@ class App extends Component {
           >
             Learn React
           </a>
+
+          <a
+            className="App-link"
+            href="../pages/test"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
         </header>
       </div>
     );

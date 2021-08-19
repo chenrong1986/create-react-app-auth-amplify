@@ -5,6 +5,7 @@ import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 import Amplify from 'aws-amplify';
 import aws_exports from './aws-exports';
 Amplify.configure(aws_exports);
+import alert from 'alert';
 
 class App extends Component {
   render() {

@@ -31,12 +31,35 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            test.jsへ
           </a>
         </header>
+        <main>
+        <h1 className="title">
+          Welcome to <a href="https://nextjs.org">Next.js!</a>
+        </h1>
+
+          <p>Test</p>
+          <div>
+            <textarea id="signed" rows="12" cols="120"></textarea>
+          </div>
+          <button id="callLambda" onClick={myClick}>Lambda呼び出す1</button>
+      </main>
       </div>
     );
   }
 }
+function myClick(){
 
+  alert("onclick");
+  var request = require('request');
+  request('https://yhrdyh4j8h.execute-api.us-east-2.amazonaws.com/chenr-test001/chenr-function', function (err, response, body) {
+    if (!err && response.statusCode == 200) {
+      document.getElementById('signed').value= response.body;
+    } else {
+      alert("API呼出エラー");
+    }
+  })
+
+}
 export default withAuthenticator(App);

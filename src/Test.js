@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import request from 'request';
+
 function Test() {
   return (
     <div className="container">
@@ -166,11 +167,13 @@ function myClick(e){
 
   alert("onclick");
   var request = require('request');
-  request('https://yhrdyh4j8h.execute-api.us-east-2.amazonaws.com/chenr-test001/chenr-function', function (err, response, body) {
-    if (!err && response.statusCode == 200) {
+  request('https://ulotglzxg8.execute-api.us-east-2.amazonaws.com/segment/chenr-segment-test', function (err, response, body) {
+    if (err) {
+      alert("API呼出エラーが発生しました:" + err);
+    } else if (response.statusCode == 200) {
       document.getElementById('signed').value= response.body;
     } else {
-      alert("API呼出エラーが発生しました。");
+      alert("API呼出エラーが発生しました:response.statusCode=[" + response.statusCode + "]");
     }
   })
 
